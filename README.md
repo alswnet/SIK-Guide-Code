@@ -1,3 +1,8 @@
+Modificacion por ALSW
+===================================================
+Quitando comentarios para taller
+
+
 SparkFun Inventor's Kit - Example Sketches
 ======================================================
 
