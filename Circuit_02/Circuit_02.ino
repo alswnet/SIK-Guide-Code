@@ -1,20 +1,18 @@
 int sensorPin = 0;
-                      
 int ledPin = 13;
 
-void setup() 
+void setup()
 {
- pinMode(ledPin, OUTPUT);	
+  pinMode(ledPin, OUTPUT);
 }
 
 
-void loop() 
+void loop()
 {
   int sensorValue;
-  sensorValue = analogRead(sensorPin);    
-  digitalWrite(ledPin, HIGH);     
-  delay(sensorValue);             
-  digitalWrite(ledPin, LOW);      
-  delay(sensorValue);             
+  sensorValue = analogRead(sensorPin);
+  digitalWrite(ledPin, HIGH);
+  delay(sensorValue);
+  digitalWrite(ledPin, LOW);
+  delay(sensorValue);
 }
-
