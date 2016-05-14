@@ -94,86 +94,51 @@ void oneOnAtATime()
 }
 
 
-/*
-pingPong()
-
-This function will step through the LEDs,
-lighting one at at time in both directions.
-*/
-
 void pingPong()
 {
   int index;
-  int delayTime = 100; // milliseconds to pause between LEDs
-  // make this smaller for faster switching
-
-  // step through the LEDs, from 0 to 7
+  int delayTime = 100; 
 
   for (index = 0; index <= 7; index++)
   {
-    digitalWrite(ledPins[index], HIGH);  // turn LED on
-    delay(delayTime);                    // pause to slow down
-    digitalWrite(ledPins[index], LOW);   // turn LED off
+    digitalWrite(ledPins[index], HIGH);  
+    delay(delayTime);                    
+    digitalWrite(ledPins[index], LOW);   
   }
-
-  // step through the LEDs, from 7 to 0
 
   for (index = 7; index >= 0; index--)
   {
-    digitalWrite(ledPins[index], HIGH);  // turn LED on
-    delay(delayTime);                    // pause to slow down
-    digitalWrite(ledPins[index], LOW);   // turn LED off
+    digitalWrite(ledPins[index], HIGH);  
+    delay(delayTime);                    
+    digitalWrite(ledPins[index], LOW);   
   }
 }
-
-
-/*
-marquee()
-
-This function will mimic "chase lights" like those around signs.
-*/
 
 void marquee()
 {
   int index;
-  int delayTime = 200; // milliseconds to pause between LEDs
-  // Make this smaller for faster switching
-
-  // Step through the first four LEDs
-  // (We'll light up one in the lower 4 and one in the upper 4)
-
-  for (index = 0; index <= 3; index++) // Step from 0 to 3
+  int delayTime = 200; 
+ 
+  for (index = 0; index <= 3; index++) 
   {
-    digitalWrite(ledPins[index], HIGH);    // Turn a LED on
-    digitalWrite(ledPins[index + 4], HIGH); // Skip four, and turn that LED on
-    delay(delayTime);                      // Pause to slow down the sequence
-    digitalWrite(ledPins[index], LOW);     // Turn the LED off
-    digitalWrite(ledPins[index + 4], LOW); // Skip four, and turn that LED off
+    digitalWrite(ledPins[index], HIGH);    
+    digitalWrite(ledPins[index + 4], HIGH); 
+    delay(delayTime);                      
+    digitalWrite(ledPins[index], LOW);    
+    digitalWrite(ledPins[index + 4], LOW); 
   }
 }
-
-
-/*
-randomLED()
-
-This function will turn on random LEDs. Can you modify it so it
-also lights them for random times?
-*/
 
 void randomLED()
 {
   int index;
   int delayTime;
 
-  // The random() function will return a semi-random number each
-  // time it is called. See http://arduino.cc/en/Reference/Random
-  // for tips on how to make random() even more random.
-
-  index = random(8);	// pick a random number between 0 and 7
+  index = random(8);	
   delayTime = 100;
 
-  digitalWrite(ledPins[index], HIGH);  // turn LED on
-  delay(delayTime);                    // pause to slow down
-  digitalWrite(ledPins[index], LOW);   // turn LED off
+  digitalWrite(ledPins[index], HIGH); 
+  delay(delayTime);                    
+  digitalWrite(ledPins[index], LOW);  
 }
 
